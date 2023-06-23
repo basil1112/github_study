@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="main">
+
+</div>
+
+<div id="even">
+
+</div>
+
+<div id="odd">
+
+</div>
+
+<script>
+
+let numbers = document.getElementById("main");
+let numbrz = numbers.innerHTML;
+const array_1= [23,30,10,15,18,48,59];
+
+let size = array_1.length;;
+index= 0;
+console.log("main array elements are:",array_1)
+main.innerHTML = array_1;
+
+var array_even = [];
+let evennumbers = document.getElementById("even");
+let evennumbrz = evennumbers.innerHTML;
+var array_odd = [];
+let oddnumbers = document.getElementById("odd");
+let oddnnumbrz = oddnumbers.innerHTML;
+for (let index = 0; index < size; index++) 
+{
+  variable = array_1[index]
+  if(variable % 2 == 0)
+  {
+    array_even.push(variable);
+  }
+  else
+  {
+    array_odd.push(variable);
+  }
+}
+console.log("Even numbers in an array are:", array_even);
+even.innerHTML = array_even;
+console.log("Odd numbers in an array are:", array_odd);
+odd.innerHTML = array_odd;
+
+
+console.log("printing variable even", even)
+
+
+</script>
+
+</body>
+</html>
