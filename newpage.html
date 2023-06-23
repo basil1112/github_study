@@ -13,11 +13,6 @@ let questions = document.getElementById("demo");
 let qnz = questions.innerHTML;
 console.log("my qns: ",qnz);
 const quest= ["What is your name?", " What do you live?", "What is your Father's name?", "What is your Mother's name?"]
-//for (let i = 0; i < 4; i++) 
-//{
-  //  variable = quest[i];
-    //console.log("check:", variable);
-//}
 
 let size = quest.length;;
 index= 0;
@@ -27,10 +22,12 @@ setInterval(function()
 if (index < size)
 {
     console.log(quest[index]);
-    questions.innerHTML = quest[index];
-    questz = quest[index] + quest[index+1];
+    let totalQuestion = questions.innerHTML +"<br></br>"+ quest[index];
+    questions.innerHTML = totalQuestion;
+    //questions.innerHTML = quest[index];
+    //questz = quest[index] + quest[index+1];
     //document.write("<br />");
-    //index++;    
+    index++;    
 }
 
 //console.log("full qns: ", quest[0] + quest[1] + quest[2] + quest[3]);
