@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="para"> this is button click</p>
+
+<input type="button" name="button_click" value="click here" onclick="buttonClickOne()">
+<input type="button" value="click" onmouseover="buttonClickTwo()">
+
+
+</body>
+
+<script>
+
+    function buttonClickOne()
+    {
+        let element = document.getElementById("para");
+        element.innerHTML = "button clicked";
+    }
+
+
+    const buttonClickTwo = ()=>
+    {
+        console.log("second method to write function")
+    }
+
+
+</script>
+</html>

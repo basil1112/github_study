@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="first" placeholder="First Name">
+<br></br>
+<input type="text" id="second" placeholder="Last Name">
+<br></br>
+<input type="button" value="click here to merge" onclick="buttonClickOne()">
+<br></br>
+<input type="text" id="final">
+
+<script>
+
+function buttonClickOne()
+{
+    var firstname = document.getElementById("first").value;
+    var secondname = document.getElementById("second").value;
+
+    if((firstname == "") || (secondname == ""))
+    {
+        console.log("empty textbox");
+    }
+    else
+    {
+        let result = firstname.concat(" ",secondname);
+        console.log("fullname is:",result);
+        document.getElementById("final").value = result;
+    }
+}
+
+</script>
+
+
+</body>
+</html>
