@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div>
+        <input type="text" name="txt-username" id="txt-username" value="" placeholder="Enter Username" />
+        <br>
+        <p id="output-msg"></p>
+        <input type="button" name="btn-check" id="btn-check" value="check here" onclick="checkUsernameAvialable()" />
+    </div>
+
+    <script>
+        let userName = ["basil1112", "juliee1112", "india458"]
+
+        function checkUsernameAvialable() {
+
+            let userInput = document.getElementById('txt-username').value;
+
+            /*`
+            here we are getting the element, by this we will get access to all its attrubute
+            like innerHTML style etc
+            */
+            let msgBox = document.getElementById('output-msg');
+            
+            //here checking for empty string 
+            if (userInput != "") {
+                // array has a property called includes which will check whether a value is present or not 
+                // and return boolean value, true if present, false if not presnt 
+                if (userName.includes(userInput)) {
+
+                    //we need to show the msg to user in front so adding the msg in p tag innerHTML
+                    msgBox.innerHTML = "Already taken! Please try another";
+                    
+                    // already we have the p tag object so we can access any attribute of that p tag using 
+                    //javascript, here am accessing the style attribute and changing the css color value ;
+                    msgBox.style.color = "red";
+                }
+                else {
+                    msgBox.innerHTML = "Avialable ! You are good to go...";
+                    msgBox.style.color = "green";
+                }
+            }
+            else {
+                //empty string error representation
+                msgBox.innerHTML = "Enter a valid username";
+                msgBox.style.color = "red";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
