@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div>
+        <input type="text" name="txt-username" id="txt-username" value="" placeholder="Enter Username" />
+        <br>
+        <p id="output-msg"></p>
+        <input type="button" name="btn-check" id="btn-check" value="check here" onclick="checkUsernameAvialable()" />
+    </div>
+
+    <script>
+        let userName = ["basil1112", "juliee1112", "india458"]
+
+        function checkUsernameAvialable() {
+
+            let userInput = document.getElementById('txt-username').value;
+
+            let isAlreadyTaken = false;
+            for(let i=0;i<userName.length;i++){
+
+                let variable = userName[i]
+                //user type cheytha saname current array index 
+                //ulla name ano enne checking 
+                //anekki already a name undallloo
+                //pinne athe kodakan patulallo username unqiue ane
+                if(variable == userInput){
+                    console.log("Already Taken");
+                    isAlreadyTaken = true;
+                    //suppose first index thanne already taken ayi 
+                    //pinne loop cheyande karyam indo ella 
+                    //so exiting loop
+                    return;
+                }
+            }
+            //loop ends 
+            //now we will check isAlreadyTaken is true or false 
+            //before loop we set this variable to false;
+            //if that value is true means line 29 
+            if(isAlreadyTaken){
+                console.log("Username not available");
+            }
+            else{
+                console.log("username avialable")
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
