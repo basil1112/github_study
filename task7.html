@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" placeholder="enter username" id="txtbox">
+<input type="button" value="click here" id="button_funct" onclick="buttonClickOne()">
+<p> </p>
+
+
+<script>
+let username = ["basil1112","julie1112"];
+
+let size = username.length;;
+index = 0;
+
+function buttonClickOne()
+{
+    for (let index = 0; index < size; index++) 
+    {
+        var text = document.getElementById("txtbox").value;
+        variable = username[index];  
+        if(variable == text)
+        {
+            console.log("username not available");
+            return;
+        }
+        else
+        {
+            console.log("username available");
+        }
+    }
+}
+
+
+</script>
+
+
+
+</body>
+</html>

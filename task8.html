@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+        <style>
+
+        .heading
+        {
+            font-size: 35;
+            color: red;
+        }
+        </style>
+
+    </head>
+        <body>
+        <h1 class="heading">My Study</h1>  
+        <input id="pass" type="password" placeholder="enter the password"> 
+        <br></br>
+        <input id="button" type="button" value="show password" onclick="show_pass()">
+        <br></br>  
+        <p id="display"> </p>
+
+            <script>
+            
+            function show_pass()
+            {
+                let variable = document.getElementById("pass").value;
+                console.log("password is:",variable);
+                let pass_element = document.getElementById("pass");
+                console.log(pass_element.type);
+                //pass_element.type = "text";
+                if(pass_element.type == "password")
+                {
+                    pass_element.type = "text";
+                }
+                else if(pass_element.type == "text")
+                {
+                    pass_element.type = "password";
+                }
+                //let element = document.getElementById("display");
+                //element.innerHTML = variable;
+            }    
+
+
+
+            </script>
+
+        </body>
+        
+</html>
