@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        #display
+        {
+            color: red;
+        }
+    </style>
+</head>
+    <body>
+    <div>
+        <input type="text" placeholder="enter your email" id="type_email">
+        <br></br>
+        <input type="password" placeholder="enter your password" id="type_pass">
+        <input type="button" value="show password" onclick="show_pass()">
+        <br></br>
+        <input type="button" value="log in" onclick="validate()">
+        <br></br>
+        <div id="display"></div>
+        
+    </div>
+
+    <script>
+        
+    function show_pass()
+    {
+        let pass = document.getElementById("type_pass").value;
+        console.log("password is", pass);
+        let pass_element = document.getElementById("type_pass");
+        pass_element.type = "text";
+    }
+
+    function validate()
+    {
+        let mail = document.getElementById("type_email").value;
+        let password = document.getElementById("type_pass").value;
+        if((mail == "") || (password == ""))
+        {
+            let result = document.getElementById("display");
+            result.innerHTML = "email or password is empty!";
+            
+        }
+    }
+
+    </script>
+    </body>
+</html>
