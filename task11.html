@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            #box1
+            {
+                height: 100px;
+                width: 400px;
+                background-color: orchid;
+            }
+    
+            #box2
+            {
+                height: 600px;
+                width: 400px;
+                background-color: beige;
+            }
+    
+        </style>
+    </head>
+<body>
+
+<div id="box1">
+    <input type="text" placeholder="enter url" id="image_url">
+    <input type="button" value="generate" id="image_generate" onclick="view_image()">
+</div> 
+
+<div id="box2"> </div>
+
+<script>
+
+    function view_image()
+    {
+        let url = document.getElementById("image_url").value;
+        console.log(url);
+        let img = document.getElementById("box2");
+        let variable = img.innerHTML
+        img.innerHTML = variable + `<img src='${url}'' alt='flower' width='400px' height='300px'>`;
+
+    }
+
+</script>
+
+
+</body>
+</html>

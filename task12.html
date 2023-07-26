@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <style>
+        #box
+        {
+            color: black;
+            height: 400px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div>
+    <input type="button" value="toggle" onclick="toggle()">
+</div>
+
+<div id="box">
+    <img id="image" height="400px" width="400px">
+</div>
+
+<script>
+
+const images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzaIpm6EAU95q5zfP7mc8Z85nXz3BO9AKOBw&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT92hWbxc1dgM1TevXYtGb3GtcDsHIy430ow&usqp=CAU"]
+
+let size = images.length;;
+index = 0;
+
+function toggle()
+{
+        variable = images[index];
+        let img = document.getElementById("image");
+        img.src = variable;
+        index++;
+}
+
+</script>
+
+</body>
+</html>
