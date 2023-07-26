@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        #box1
+        {
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+        }
+
+        #box2
+        {
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="box1">
+    <input type="number" placeholder="enter number" id="number">
+    <input type="button" value="generate" id="msg" onclick="validate() ">
+    <div id="display"></div>
+</div> 
+
+<div> dynamic generated components</div>
+
+<div id="box2"> </div>
+
+    <script>
+        function validate()
+        {
+            let num = document.getElementById("number").value;
+            console.log(num)
+            if(num == "")
+            {
+                let result = document.getElementById("display");
+                result.innerHTML = "enter valid number";
+            }
+            else
+            {
+                let msg = document.getElementById("box2");
+                for(i=0;i<num;i++)
+                {
+                    let var = msg.innerHTML;
+                    msg.innerHTML = var + "<input type='button' value='click button'>";
+                    
+                }
+            }
+            
+            
+        }
+        
+
+    </script>
+
+
+</body>
+</html>
