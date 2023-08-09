@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+    <body>
+        <input type="text" placeholder="enter total count" id="st_count">
+        <br></br>
+        <input type="text" placeholder="enter student name" id="name">
+        <br></br>
+        <input type="text" placeholder="enter student age" id="age">
+        <br></br>
+        <input type="button" value="submit" onclick = "fun_submit()">
+
+
+        <script>
+            const array_student = [];
+            
+            function fun_submit()
+            {
+                len = array_student.length;
+                var st_count = document.getElementById("st_count").value;
+    
+                   if(st_count == len)
+                   {
+                    
+                   }
+                   else
+                   {
+                        var st_name = document.getElementById("name").value;
+                        var st_age = document.getElementById("age").value;
+                        console.log(st_count,st_name,st_age);
+
+                        let student = new Object();
+                        student.name = st_name;
+                        student.age = st_age;
+                        array_student.push(student);
+                        len = array_student.length;
+                        if(st_count == len)
+                        {
+                            console.log(array_student);
+                        }
+                        document.getElementById("name").value = "";
+                        document.getElementById("age").value = "";
+                        
+                       
+                   } 
+                  
+            }
+           
+            
+            
+
+
+
+        </script>
+    </body>
+</html>
