@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html>
+    <body>
+        <div id="main" height="800px" width="800px">
+            
+        </div>
+
+        <script>
+
+            array_student = []
+            
+            let student = new Object();
+            student.name = "julie";
+            student.age = "23";
+            student.mark = "80";
+            array_student.push(student);
+            
+            let student1 = {
+                name:"basil",
+                age:"30",
+                mark:"85"}
+            array_student.push(student1);
+            
+            let student2 = {
+                name:"jeeva",
+                age:"18",
+                mark:"83"}
+            array_student.push(student2);
+            console.log(array_student);
+
+            len = array_student.length;
+
+            for(i=0;i<len;i++)
+            {
+                display = array_student[i].name;
+                age = array_student[i].age;
+                mark = array_student[i].mark;
+             
+                let content = document.getElementById("main");
+                content.innerHTML = content.innerHTML + "<div>" + display + "<p>" + age + "<p>" + mark + "</p> </p> </div>"
+            }
+
+        </script>
+    </body>
+</html>

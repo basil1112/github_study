@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html>
+
+<body>
+
+    <input type="text" placeholder="enter first name" id="f_name">
+    <br></br>
+    <input type="text" placeholder="enter last name" id="l_name">
+    <br></br>
+    <input type="button" value="merge" onclick="merge()">
+    <br></br>
+    <p id="main">
+
+    </p>
+
+    <script>
+
+        array_fullname = [];
+
+        function merge()
+        {
+            var first = document.getElementById("f_name").value;
+            var last = document.getElementById("l_name").value;
+
+            let fullname = {
+                firstname:first,
+                lastname:last}
+
+            array_fullname.push(fullname);
+            console.log(array_fullname);
+
+            len = array_fullname.length;
+            
+            clear = document.getElementById("main");
+            clear.innerHTML = "";
+
+            for(i=0;i<len;i++)
+            {
+                fn = array_fullname[i].firstname;
+                ln = array_fullname[i].lastname;
+
+                let out = document.getElementById("main");
+                out.innerHTML = out.innerHTML + "<div>" + fn + " " + ln + "</div>"
+
+                document.getElementById("f_name").value = "";
+                document.getElementById("l_name").value = "";
+
+
+            }
+        }
+        
+    </script>
+</body>
+</html>
