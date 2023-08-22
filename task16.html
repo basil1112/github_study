@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+    <body>
+        <input type="text" placeholder="enter product name" id="p_name">
+        <br></br>
+        <input type="text" placeholder="enter category" id="p_cat">
+        <br></br>
+        <input type="text" placeholder="enter price" id="p_price">
+        <br></br>
+        <input type="button" value="submit" onclick="display()">
+        <br></br>
+        <p id="main"></p>
+
+
+        <script>
+        
+        array_display = [];
+
+        function display()
+        {
+            var p_name = document.getElementById("p_name").value;
+            var p_cat= document.getElementById("p_cat").value;
+            var p_price = document.getElementById("p_price").value;
+
+            let productdetails = {
+                prod_name:p_name,
+                prod_category:p_cat,
+                prod_price:p_price
+            }
+            
+            array_display.push(productdetails);
+            console.log(productdetails);
+
+            len = array_display.length;
+            clear = document.getElementById("main");
+            clear.innerHTML = "";
+
+            for(i=0;i<len;i++)
+            {
+                name = array_display[i].prod_name;
+                category = array_display[i].prod_category;
+                price = array_display[i].prod_price;
+
+                let output = document.getElementById("main");
+                output.innerHTML = output.innerHTML + "<div>" + "</br>" + name + "</br>" + category + "</br>" + price + "</div>"
+
+                document.getElementById("p_name").value = "";
+                document.getElementById("p_cat").value = "";
+                document.getElementById("p_price").value = "";
+
+
+            }
+        }
+
+
+        </script>
+    </body>
+</html>
